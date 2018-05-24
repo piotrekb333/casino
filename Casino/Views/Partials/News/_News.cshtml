@@ -1,0 +1,65 @@
+﻿@using Casino.Models.NewsModels
+@using Umbraco.Core
+@model IEnumerable<News>
+@{
+    Layout = null;
+    int i = 0;
+}
+
+@{
+        foreach (var item in Model)
+        {
+            string datepublished = item.DatePublished.Value.ToShortDateString();
+            <div class="card mb-3">
+            <a href="#">
+
+                @*<img class="card-img-top img-fluid w-100" src="https://unsplash.it/700/450?image=281" alt="">*@
+                <img class="card-img-top img-fluid w-100" src="@item.ImagePath" alt="">
+            </a>
+            <div class="card-body">
+                <h6 class="card-title mb-1"><a data-toggle="modal" data-target="#@i" href="#">@item.Title</a></h6>
+                <p class="card-text small">
+                    
+                </p>
+            </div>
+            <hr class="my-0">
+            @*
+    <div class="card-body py-2 small">
+        <a class="mr-3 d-inline-block" href="#">
+            <i class="fa fa-fw fa-thumbs-up"></i>Like
+        </a>
+        <a class="mr-3 d-inline-block" href="#">
+            <i class="fa fa-fw fa-comment"></i>Comment
+        </a>
+        <a class="d-inline-block" href="#">
+            <i class="fa fa-fw fa-share"></i>Share
+        </a>
+    </div>
+            *@
+            <div class="card-footer small text-muted">Posted: @datepublished</div>
+        </div>
+
+
+
+
+        <div class="modal fade" id="@i" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        @Html.Raw(@item.Body)
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        i++;
+    }
+}

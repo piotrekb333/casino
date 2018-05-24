@@ -1,0 +1,116 @@
+﻿@using Casino.Models.CasinoModels
+@model IEnumerable<CasinoModel>
+@{
+    Layout = null;
+    int i = 0;
+}
+
+
+@*
+    @{
+        foreach (var item in Model)
+        {
+            if (i % 4 == 0)
+            {
+                if (i != 0)
+                {
+
+                    @:</div>
+                }
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">@Html.Raw(item.Title)</h3>
+                                <p>@Html.Raw(item.Body)</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.row-->
+
+            }
+            else
+            {
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-block">
+
+                            <div class="media-body fade-up">
+                                <h3 class="media-heading">@Html.Raw(item.Title)</h3>
+                                <p>@Html.Raw(item.Body)</p>
+                            </div>
+                        </div>
+                    </div><!--/.col-md-4-->
+            }
+            i++;
+        }
+        if (Model.Count() > 0)
+        {
+            @:</div>
+        }
+    }
+
+
+
+
+
+
+
+*@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*
+
+
+
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.Raw(item.Title)</td>
+                        <td>@Html.Raw(item.Body)</td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+*@     
+<div class="list-group">
+  @foreach (var item in Model)
+  {
+
+  <a href="@item.SiteUrl" class="list-group-item list-group-item-action">
+    @Html.Raw(item.Title)
+  </a>
+
+}
+</div>
