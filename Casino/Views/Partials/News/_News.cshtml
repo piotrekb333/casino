@@ -5,61 +5,187 @@
     Layout = null;
     int i = 0;
 }
+@*
+        <div class="container">
+            @{
+                List<News> news = new List<News>();
+                foreach (var item in Model)
+                {
 
-@{
-        foreach (var item in Model)
-        {
-            string datepublished = item.DatePublished.Value.ToShortDateString();
-            <div class="card mb-3">
-            <a href="#">
-
-                @*<img class="card-img-top img-fluid w-100" src="https://unsplash.it/700/450?image=281" alt="">*@
-                <img class="card-img-top img-fluid w-100" src="@item.ImagePath" alt="">
-            </a>
-            <div class="card-body">
-                <h6 class="card-title mb-1"><a data-toggle="modal" data-target="#@i" href="#">@item.Title</a></h6>
-                <p class="card-text small">
-                    
-                </p>
-            </div>
-            <hr class="my-0">
-            @*
-    <div class="card-body py-2 small">
-        <a class="mr-3 d-inline-block" href="#">
-            <i class="fa fa-fw fa-thumbs-up"></i>Like
-        </a>
-        <a class="mr-3 d-inline-block" href="#">
-            <i class="fa fa-fw fa-comment"></i>Comment
-        </a>
-        <a class="d-inline-block" href="#">
-            <i class="fa fa-fw fa-share"></i>Share
-        </a>
-    </div>
-            *@
-            <div class="card-footer small text-muted">Posted: @datepublished</div>
+                    if (i % 3 == 0 && i > 0)
+                    {
+                        Html.RenderPartial("Partials/News/_ArticleCard", news);
+                        news = new List<News>();
+                    }
+                    else
+                    {
+                        news.Add(item);
+                    }
+                    i++;
+                }
+            }
+            @if (i % 3 != 0 && i > 0)
+            {
+                if (news.Count > 0)
+                {
+                    Html.RenderPartial("Partials/News/_ArticleCard", news);
+                }
+            }
         </div>
 
 
 
+    <div class="col-xs-12">
+        <div class="article-body">
+            <img src="https://placeimg.com/380/230/nature"
+                 alt="Cheetah!" />
+            <h4 class="media-heading">APILARNILUL</h4>
+            <p class="text">By Francisco</p>
+            <p>
+                Apilarnilul este un produs apicol natural, obținut din larvele de
+                trântor care constituie materia primă principală. Acestea la vârsta de
+                7 zile sunt recoltate integral obținându-se astfel apilarnilul.În mod
+                normal, sezonul apicol activ este în perioada mai-iulie. Asta într-o colonie
+                de albine constituită ca o unitate biologică. Într-o astfel de colonie,
+                numărul indivizilor masculi este de 400-1800 trântori rareori numărul lor
+                depășind 2000. Într-o colonie de albine numărul de trântori pe care îi crește
+                și îi tolerează este limitat și depinde de comportamentul coloniei ca un tot unitar.
+            </p>
+        </div>
+        <div class="article-body">
+            <h4 class="media-heading">APILARNILUL</h4>
+            <p class="text">By Francisco</p>
+            <p>
+                Apilarnilul este un produs apicol natural, obținut din larvele de
+                trântor care constituie materia primă principală. Acestea la vârsta de
+                7 zile sunt recoltate integral obținându-se astfel apilarnilul.În mod
+                normal, sezonul apicol activ este în perioada mai-iulie. Asta într-o colonie
+                de albine constituită ca o unitate biologică. Într-o astfel de colonie,
+                numărul indivizilor masculi este de 400-1800 trântori rareori numărul lor
+                depășind 2000. Într-o colonie de albine numărul de trântori pe care îi crește
+                și îi tolerează este limitat și depinde de comportamentul coloniei ca un tot unitar.
+            </p>
+        </div>
+    </div>
+*@
 
-        <div class="modal fade" id="@i" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title"></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        @Html.Raw(@item.Body)
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+@*
+    <div class="panel-body">
+        <div class="tab-content">
+                <div class="well">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="http://i1.wp.com/www.moneybook.ro/wp-content/uploads/2016/02/polen-crud.jpg?resize=768%2C480">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">APILARNILUL</h4>
+                            <p class="text">By Francisco</p>
+                            <p>
+                                Apilarnilul este un produs apicol natural, obținut din larvele de
+                                trântor care constituie materia primă principală. Acestea la vârsta de
+                                7 zile sunt recoltate integral obținându-se astfel apilarnilul.În mod
+                                normal, sezonul apicol activ este în perioada mai-iulie. Asta într-o colonie
+                                de albine constituită ca o unitate biologică. Într-o astfel de colonie,
+                                numărul indivizilor masculi este de 400-1800 trântori rareori numărul lor
+                                depășind 2000. Într-o colonie de albine numărul de trântori pe care îi crește
+                                și îi tolerează este limitat și depinde de comportamentul coloniei ca un tot unitar.
+                            </p>
+                            <ul class="list-inline list-unstyled">
+                                <li><span><i class="glyphicon glyphicon-calendar"></i> 1 days, 8 hours </span></li>
+                                <li>|</li>
+                                <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+                                <li>|</li>
+                                <li>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </li>
+                                <li>|</li>
+                                <li>
+                                    <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                                    <span><i class="fa fa-facebook-square"></i></span>
+                                    <span><i class="fa fa-twitter-square"></i></span>
+                                    <span><i class="fa fa-google-plus-square"></i></span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="well">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="http://i0.wp.com/www.moneybook.ro/wp-content/uploads/2016/08/images_8.jpg?resize=299%2C224">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ziua Femeii</h4>
+                            <p class="text-right">By Anailuj</p>
+                            <p>
+                                In fiecare an, pe 8 Martie, trebuie sa le spunem din toata inima La Multi Ani!
+                                De cand se serbeaza Ziua Femeii?
+                                Am putea spune ca Ziua femeii, Ziua mamei se serbeaza inca de pe vremea grecilor antici.
+                                In fiecare primavara, ei o serbau pe Rhea, mama tuturor zeilor.
+                                In cultura multor tari, 8 Martie s-a transformat dintr-o simpla zi a calendarului in sarbatoarea primaverii,
+                                in ziua in care mamele, bunicile, sotiile, prietenele, surorile, fiicele, colegele,
+                                primesc flori si mici daruri simbolice care subliniaza rolul lor acasa, in familie, in societate.
+                                1907 – La Copenhaga a avut loc prima Conferinta a femeilor socialiste, la initiativa ziaristei germane Clara Zetkin,
+                                care conducea din 1890 revista “Die Gleichheit” (Egalitatea).
+                            </p>
+                            <ul class="list-inline list-unstyled">
+                                <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+                                <li>|</li>
+                                <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+                                <li>|</li>
+                                <li>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </li>
+                                <li>|</li>
+                                <li>
+                                    <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                                    <span><i class="fa fa-facebook-square"></i></span>
+                                    <span><i class="fa fa-twitter-square"></i></span>
+                                    <span><i class="fa fa-google-plus-square"></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
         </div>
-        i++;
-    }
-}
+    </div>
+*@
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12 blog-main">
+            @foreach (var item in Model)
+            {
+                <div class="blog-post">
+                    <h2 class="blog-post-title">Another blog post</h2>
+                    <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
+                    <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                    <blockquote>
+                        <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </blockquote>
+                    <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <hr />
+                </div><!-- /.blog-post -->
+            }
+
+        </div><!-- /.blog-main -->
+
+    </div><!-- /.row -->

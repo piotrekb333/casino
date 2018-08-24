@@ -473,6 +473,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <None Include="Properties\PublishProfiles\casinonomad - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\casinonomad - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Chart.js" />
@@ -2012,9 +2013,11 @@
     <Content Include="Views\Casinos.cshtml" />
     <Content Include="Views\Casino.cshtml" />
     <Content Include="Views\Partials\Casinos\_RenderCasinos.cshtml" />
+    <Content Include="Views\Partials\News\_ArticleCard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

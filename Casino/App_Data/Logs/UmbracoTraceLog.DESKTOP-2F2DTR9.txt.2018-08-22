@@ -1,0 +1,108 @@
+﻿ 2018-08-22 23:39:35,580 [P6544/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.9.2 application starting on DESKTOP-2F2DTR9
+ 2018-08-22 23:39:35,614 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2018-08-22 23:39:35,708 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 94ms)
+ 2018-08-22 23:39:35,780 [P6544/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2018-08-22 23:39:35,784 [P6544/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2018-08-22 23:39:35,785 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-08-22 23:39:36,162 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 377ms)
+ 2018-08-22 23:39:36,162 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
+ 2018-08-22 23:39:36,168 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 5ms)
+ 2018-08-22 23:39:36,185 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-08-22 23:39:36,186 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-08-22 23:39:36,186 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2018-08-22 23:39:36,193 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 7ms)
+ 2018-08-22 23:39:36,194 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-08-22 23:39:36,194 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-08-22 23:39:36,194 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2018-08-22 23:39:36,202 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 7ms)
+ 2018-08-22 23:39:36,214 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-08-22 23:39:36,215 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-08-22 23:39:36,215 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
+ 2018-08-22 23:39:36,219 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 4ms)
+ 2018-08-22 23:39:36,222 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-08-22 23:39:36,222 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-08-22 23:39:36,223 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
+ 2018-08-22 23:39:36,234 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 11ms)
+ 2018-08-22 23:39:37,751 [P6544/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2018-08-22 23:39:38,028 [P6544/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2018-08-22 23:39:38,631 [P6544/D2/T1] WARN  Umbraco.Core.Sync.DatabaseServerMessenger - No last synced Id found, this generally means this is a new server/install. The server will build its caches and indexes, and then adjust its last synced Id to the latest found in the database and maintain cache updates based on that Id.
+ 2018-08-22 23:39:38,649 [P6544/D2/T1] INFO  umbraco.content - Load Xml from file...
+ 2018-08-22 23:39:38,695 [P6544/D2/T1] INFO  umbraco.content - Loaded Xml from file.
+ 2018-08-22 23:39:38,701 [P6544/D2/T1] INFO  umbraco.content - Loading content from database...
+ 2018-08-22 23:39:39,260 [P6544/D2/T1] INFO  Umbraco.Web.ExamineStartup - Forcing index InternalMemberIndexSet to be unlocked since it was left in a locked state
+ 2018-08-22 23:39:39,266 [P6544/D2/T1] INFO  Umbraco.Web.ExamineStartup - Forcing index InternalIndexSet to be unlocked since it was left in a locked state
+ 2018-08-22 23:39:39,267 [P6544/D2/T1] INFO  Umbraco.Web.ExamineStartup - Forcing index ExternalIndexSet to be unlocked since it was left in a locked state
+ 2018-08-22 23:39:39,269 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - Rebuilding index, Provider=InternalMemberIndexer, NodeId=-1
+ 2018-08-22 23:39:39,348 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - member, Provider=InternalMemberIndexer, NodeId=-1
+ 2018-08-22 23:39:39,437 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - member, took 88ms, Provider=InternalMemberIndexer, NodeId=-1
+ 2018-08-22 23:39:39,437 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - Rebuilding index, Provider=InternalIndexer, NodeId=-1
+ 2018-08-22 23:39:39,479 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - content, Provider=InternalIndexer, NodeId=-1
+ 2018-08-22 23:39:39,645 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-08-22 23:39:39,645 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-08-22 23:39:39,645 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IParameterEditor
+ 2018-08-22 23:39:39,652 [P6544/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IParameterEditor (took 7ms)
+ 2018-08-22 23:39:40,022 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - content, took 542ms, Provider=InternalIndexer, NodeId=-1
+ 2018-08-22 23:39:40,022 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - media, Provider=InternalIndexer, NodeId=-1
+ 2018-08-22 23:39:40,238 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - media, took 215ms, Provider=InternalIndexer, NodeId=-1
+ 2018-08-22 23:39:40,239 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - Rebuilding index, Provider=ExternalIndexer, NodeId=-1
+ 2018-08-22 23:39:40,260 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - content, Provider=ExternalIndexer, NodeId=-1
+ 2018-08-22 23:39:40,287 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - content, took 26ms, Provider=ExternalIndexer, NodeId=-1
+ 2018-08-22 23:39:40,287 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - Start data queries - media, Provider=ExternalIndexer, NodeId=-1
+ 2018-08-22 23:39:40,302 [P6544/D2/T1] INFO  UmbracoExamine.DataServices.UmbracoLogService - PerformIndexAll - End data queries - media, took 11ms, Provider=ExternalIndexer, NodeId=-1
+ 2018-08-22 23:39:40,311 [P6544/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2018-08-22 23:39:40,314 [P6544/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2018-08-22 23:39:40,322 [P6544/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 4868ms)
+ 2018-08-22 23:39:40,584 [P6544/D2/T10] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://localhost:55152/umbraco
+ 2018-08-22 23:39:40,586 [P6544/D2/T10] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:55152/umbraco (UmbracoModule request)
+ 2018-08-22 23:39:43,263 [P6544/D2/T12] INFO  umbraco.content - Save Xml to file...
+ 2018-08-22 23:39:43,272 [P6544/D2/T12] INFO  umbraco.content - Saved Xml to file.
+ 2018-08-22 23:40:50,916 [P6544/D2/T10] WARN  Umbraco.Web.Mvc.RenderRouteHandler - The current Document Type home matches a locally declared controller of type Casino.Controllers.HomeController. Custom Controllers for Umbraco routing must implement 'Umbraco.Web.Mvc.IRenderController' and inherit from 'System.Web.Mvc.ControllerBase'.
+ 2018-08-22 23:41:00,096 [P6544/D2/T10] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-08-22 23:41:00,097 [P6544/D2/T10] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-08-22 23:41:00,097 [P6544/D2/T10] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.Deploy.IServiceConnector
+ 2018-08-22 23:41:00,101 [P6544/D2/T10] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.Deploy.IServiceConnector (took 4ms)
+ 2018-08-22 23:41:26,880 [P6544/D2/T10] WARN  Umbraco.Web.Mvc.RenderRouteHandler - The current Document Type casino matches a locally declared controller of type Casino.Controllers.CasinoController. Custom Controllers for Umbraco routing must implement 'Umbraco.Web.Mvc.IRenderController' and inherit from 'System.Web.Mvc.ControllerBase'.
+ 2018-08-22 23:41:48,851 [P6544/D2/T17] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-08-22 23:41:48,851 [P6544/D2/T17] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-08-22 23:41:48,852 [P6544/D2/T17] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2018-08-22 23:41:48,862 [P6544/D2/T15] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-08-21 23:41:48
+ 2018-08-22 23:41:48,866 [P6544/D2/T17] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper (took 15ms)
+ 2018-08-22 23:45:19,769 [P6544/D2/T31] WARN  Umbraco.Web.Mvc.RenderRouteHandler - The current Document Type casino matches a locally declared controller of type Casino.Controllers.CasinoController. Custom Controllers for Umbraco routing must implement 'Umbraco.Web.Mvc.IRenderController' and inherit from 'System.Web.Mvc.ControllerBase'.
+ 2018-08-22 23:46:02,223 [P6544/D2/T30] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-08-22 23:46:02,223 [P6544/D2/T30] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-08-22 23:46:02,224 [P6544/D2/T30] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2018-08-22 23:46:02,230 [P6544/D2/T30] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 6ms)
+ 2018-08-22 23:46:02,497 [P6544/D2/T30] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-08-22 23:46:02,497 [P6544/D2/T30] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-08-22 23:46:02,497 [P6544/D2/T30] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IAction
+ 2018-08-22 23:46:02,519 [P6544/D2/T30] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IAction (took 21ms)
+ 2018-08-22 23:46:11,213 [P6544/D2/T30] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotrekb3 from IP address ::1
+ 2018-08-22 23:46:19,411 [P6544/D2/T35] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1
+ 2018-08-22 23:46:23,353 [P6544/D2/T20] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1
+ 2018-08-22 23:46:28,363 [P6544/D2/T20] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1
+ 2018-08-22 23:46:33,695 [P6544/D2/T20] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1
+ 2018-08-22 23:46:54,321 [P6544/D2/T20] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:46:58,564 [P6544/D2/T20] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:47:10,410 [P6544/D2/T43] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username pepeb333@gmail.com from IP address ::1
+ 2018-08-22 23:47:15,259 [P6544/D2/T43] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username pepeb333@gmail.com from IP address ::1
+ 2018-08-22 23:47:18,881 [P6544/D2/T41] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username pepeb333@gmail.com from IP address ::1
+ 2018-08-22 23:47:21,943 [P6544/D2/T43] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username pepeb333@gmail.com from IP address ::1
+ 2018-08-22 23:47:28,571 [P6544/D2/T41] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:47:32,484 [P6544/D2/T41] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:47:35,575 [P6544/D2/T42] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:47:44,274 [P6544/D2/T41] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:47:52,145 [P6544/D2/T45] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:47:53,884 [P6544/D2/T41] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:49:05,373 [P6544/D2/T48] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:49:21,686 [P6544/D2/T44] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:49:31,679 [P6544/D2/T51] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:49:43,714 [P6544/D2/T47] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:55:24,657 [P6544/D2/T53] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:55:49,888 [P6544/D2/T68] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:55:56,169 [P6544/D2/T69] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:55:58,769 [P6544/D2/T53] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:56:00,162 [P6544/D2/T53] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:56:03,112 [P6544/D2/T53] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:56:06,200 [P6544/D2/T68] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:59:22,323 [P6544/D2/T72] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked
+ 2018-08-22 23:59:25,077 [P6544/D2/T63] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt failed for username piotr.bancarzewski3@gmail.com from IP address ::1, the user is locked

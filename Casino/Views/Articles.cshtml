@@ -1,7 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = "Master.cshtml";
-	var selection = CurrentPage.Children.Where("Visible").OrderBy("CreateDate desc");
+    Layout = "Master.cshtml";
+    var selection = CurrentPage.Children.Where("Visible").OrderBy("CreateDate desc");
 }
 
 @* the fun starts here
@@ -256,16 +256,4 @@
 
 
 
-
-
-<div class="row">
-    <div class="col-lg-12">
-
-        <hr class="mt-2">
-        <div class="card-columns">
-            @Html.Action("RenderNews", "News")
-        </div>
-        <!-- /Card Columns-->
-    </div>
-
-</div>
+@Html.Action("RenderNews", "News")
