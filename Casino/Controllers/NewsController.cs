@@ -16,7 +16,7 @@ namespace Casino.Controllers
             try
             {
                 List<News> newsList = new List<News>();
-                var list=CurrentPage?.Children.ToList();
+                var list=CurrentPage?.Children.Where(m=>!m.IsDraft).ToList();
                 if (list != null)
                 {
                     list.ForEach(m =>
