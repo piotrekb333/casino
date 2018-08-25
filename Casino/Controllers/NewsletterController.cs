@@ -6,12 +6,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
-using Umbraco.Web.Mvc;
+using System.Web.Http;
+
+using Umbraco.Web.WebApi;
 
 namespace Casino.Controllers
 {
-    public class NewsletterController : SurfaceController
+    public class NewsletterController : UmbracoApiController
     {
         private readonly INewsletterService _newsletterService;
         public NewsletterController(INewsletterService newsletterService)
@@ -19,11 +20,12 @@ namespace Casino.Controllers
             _newsletterService = newsletterService;
         }
 
-        public JsonResult SaveToNewsletter(SaveToNewsletterRequest model)
+        [HttpPost]
+        public IHttpActionResult SaveToNewsletter(SaveToNewsletterRequest model)
         {
             SaveToNewsletterResponse response = new SaveToNewsletterResponse();
             response.Success=_newsletterService.SaveToNewsletter(model.Email);
-            return Json(response);
+            return Ok(response);
         }
     }
 }
