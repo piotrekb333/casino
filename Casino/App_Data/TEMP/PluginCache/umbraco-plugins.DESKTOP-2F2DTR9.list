@@ -756,6 +756,3 @@ Umbraco.Core.Persistence.Mappers.ServerRegistrationMapper, Umbraco.Core, Version
 Umbraco.Core.Persistence.Mappers.UmbracoEntityMapper, Umbraco.Core, Version=1.0.6634.25789, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Persistence.Mappers.UserMapper, Umbraco.Core, Version=1.0.6634.25789, Culture=neutral, PublicKeyToken=null
 
-Umbraco.Core.Deploy.IServiceConnector
-
-

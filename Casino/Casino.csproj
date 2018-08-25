@@ -335,8 +335,11 @@
     <Compile Include="Models\CasinoModels\CasinoModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NavigationModels\TopNavigationModel.cs" />
     <Compile Include="Models\NewsModels\News.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Implementations\SearchService.cs" />
+    <Compile Include="Services\Interfaces\ISearchService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2013,11 +2016,10 @@
     <Content Include="Views\Casinos.cshtml" />
     <Content Include="Views\Casino.cshtml" />
     <Content Include="Views\Partials\Casinos\_RenderCasinos.cshtml" />
-    <Content Include="Views\Partials\News\_ArticleCard.cshtml" />
+    <Content Include="Views\Partials\TopNavigationItems.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -1,4 +1,5 @@
 ﻿using Casino.Models.CasinoModels;
+using Casino.Services.Implementations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,13 +18,12 @@ namespace Casino.Controllers
             try
             {
                 var list = CurrentPage?.Children.ToList();
-                List<Casino.Models.CasinoModels.CasinoModel> newsList = new List<Casino.Models.CasinoModels.CasinoModel>();
+                List<CasinoModel> newsList = new List<CasinoModel>();
                 if (list != null)
-                {
-                    
+                {                   
                     list.ForEach(m =>
                     {
-                        newsList.Add(new Casino.Models.CasinoModels.CasinoModel
+                        newsList.Add(new CasinoModel
                         {
                             Body = m.GetProperty("bodyCasino")?.Value?.ToString(),
                             Title = m.GetProperty("titleCasino")?.Value?.ToString(),
