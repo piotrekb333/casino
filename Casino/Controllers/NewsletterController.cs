@@ -24,7 +24,7 @@ namespace Casino.Controllers
         public IHttpActionResult SaveToNewsletter(SaveToNewsletterRequest model)
         {
             SaveToNewsletterResponse response = new SaveToNewsletterResponse();
-            response.Success=_newsletterService.SaveToNewsletter(model.Email);
+            response = _newsletterService.SaveToNewsletter(model.Email);
             return Ok(response);
         }
     }

@@ -21,11 +21,30 @@ namespace Casino
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js"
+                      ));
+
+
+            bundles.Add(new ScriptBundle("~/Script/js").Include(
+                      "~/Scripts/jquery-1.10.2.min.js",
+                      "~/Scripts/Chart.js",
+                      "~/Scripts/bootstrap.bundle.min.js",
+                      "~/Scripts/jquery.dataTables.js",
+                      "~/Scripts/dataTables.bootstrap4.js",
+                      "~/Scripts/sb-admin.js",
+                      "~/Scripts/sb-admin-datatables.js",
+                      "~/Scripts/sb-admin-charts.js",
+                      "~/Scripts/Newsletter/Newsletter.js",
+                      "~/Scripts/jquery.validate*",
+                       "~/Scripts/modernizr-*"
+                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/css/dataTables.bootstrap4.css",
+                      "~/css/font-awesome.min.css",
+                      "~/css/sb-admin.css"
+                      ));
         }
     }
 }

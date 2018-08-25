@@ -9,5 +9,6 @@ namespace DAL.Repositories.Interfaces
 {
     public interface INewsletterRepository : IRepository<Newsletter> 
     {
+        bool EmailExistsInNewsletter(string email);
     }
 }
