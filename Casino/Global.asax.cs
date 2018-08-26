@@ -22,6 +22,7 @@ namespace Casino
         protected override void OnApplicationStarted(object sender, EventArgs e)
         {
             AutofacConfig.RegisterServices();
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             base.OnApplicationStarted(sender, e);
         }
     }

@@ -40,7 +40,7 @@ namespace Casino
                       ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/css/bootstrap.min.css",
                       "~/css/dataTables.bootstrap4.css",
                       "~/css/font-awesome.min.css",
                       "~/css/sb-admin.css"

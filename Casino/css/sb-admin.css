@@ -598,3 +598,8 @@ footer.sticky-footer {
     margin-bottom: 1.25rem;
     color: #999;
 }
+
+
+.help-block {
+    color: red;
+}
