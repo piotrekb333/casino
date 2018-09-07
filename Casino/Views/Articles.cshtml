@@ -1,7 +1,6 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "Master.cshtml";
-    var selection = CurrentPage.Children.Where("Visible").OrderBy("CreateDate desc");
 }
 
 @Html.Action("RenderNews", "News")

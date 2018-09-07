@@ -29,6 +29,7 @@ namespace Casino.Controllers
                             DatePublished = m.GetProperty("articlePublishedDate").HasValue ? DateTime.Parse(m.GetProperty("articlePublishedDate").Value.ToString()) : new DateTime?()
                         });
                     });
+                    newsList = newsList.OrderByDescending(m => m.DatePublished).ToList();
                 }
                 return PartialView("News/_News",newsList);
             }
