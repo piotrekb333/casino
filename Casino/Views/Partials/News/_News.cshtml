@@ -168,20 +168,42 @@
 
 
 
+@*
+    <div class="row">
+        <div class="col-sm-12 blog-main">
+            @foreach (var item in Model)
+            {
+            <div class="blog-post">
+                <h2 class="blog-post-title">@item.Title</h2>
+                <p class="blog-post-meta">@(item.DatePublished.HasValue ? item.DatePublished.Value.ToString("MMM dd, yyyy") : "")</p>
 
-<div class="row">
-    <div class="col-sm-12 blog-main">
-        @foreach (var item in Model)
-        {
-        <div class="blog-post">
-            <h2 class="blog-post-title">@item.Title</h2>
-            <p class="blog-post-meta">@(item.DatePublished.HasValue ? item.DatePublished.Value.ToString("MMM dd, yyyy") : "")</p>
- 
-            @Html.Raw(item.Body)
-            <hr />
-        </div><!-- /.blog-post -->
-        }
+                @Html.Raw(item.Body)
+                <hr />
+            </div><!-- /.blog-post -->
+            }
 
-    </div><!-- /.blog-main -->
+        </div><!-- /.blog-main -->
 
-</div><!-- /.row -->
+    </div><!-- /.row -->
+*@
+
+
+<div class="post-widgets">
+        <div class="row">
+            <div class="col-md-12">
+                @foreach (var item in Model)
+                {
+                    <div class="page">
+                        <h3><a href="@item.SiteUrl">@item.Title</a> </h3>
+                        <div class="details">
+                            <ul>
+                                <li>@(item.DatePublished.HasValue ? item.DatePublished.Value.ToString("MMM dd, yyyy") : "")</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                }
+                </div>
+        </div>
+
+</div>

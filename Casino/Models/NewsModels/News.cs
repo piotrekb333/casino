@@ -11,5 +11,6 @@ namespace Casino.Models.NewsModels
         public string Body { get; set; }
         public string ImagePath { get; set; }
         public DateTime? DatePublished { get; set; }
+        public string SiteUrl { get; set; }
     }
 }

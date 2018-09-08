@@ -1,5 +1,23 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Article>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
+
+
+
+
+
+<div class="row">
+    <div class="col-sm-12 blog-main">
+            <div class="blog-post">
+                <h2 class="blog-post-title">@CurrentPage.articleTitle</h2>
+                <p class="blog-post-meta">@(CurrentPage.articlePublishedDate!=null ? CurrentPage.articlePublishedDate.ToString("MMM dd, yyyy") : "")</p>
+
+                @Html.Raw(CurrentPage.articleBody)
+                <hr />
+            </div><!-- /.blog-post -->
+
+    </div><!-- /.blog-main -->
+
+</div><!-- /.row -->

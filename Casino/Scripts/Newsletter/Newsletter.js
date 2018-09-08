@@ -29,6 +29,7 @@ function SaveToNewsletter() {
     });
     if (!$("#newsletter-form").valid())
         return;
+    $("#saveToEmailBtn").attr('disabled', true);
     $.ajax({
         type: 'POST',
         url: '/Umbraco/Api/Newsletter/SaveToNewsletter',
@@ -45,6 +46,8 @@ function SaveToNewsletter() {
             swal("Error!", result.Message, "error");
         }
     }).fail(function () {
-        swal("Error!", "Error occurred", "error");
+            swal("Error!", "Error occurred", "error");
+    }).always(function () {
+        $("#saveToEmailBtn").attr('disabled', false);
     });
 }

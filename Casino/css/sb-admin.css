@@ -603,3 +603,77 @@ footer.sticky-footer {
 .help-block {
     color: red;
 }
+
+
+
+/* ------ page ------ */
+.page {
+    background-color: #fff;
+    padding: 1px 15px;
+}
+
+    .page h3 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .page p {
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .page .details ul {
+        list-style: none;
+        padding-left: 0px;
+        margin-bottom: 18px;
+    }
+
+        .page .details ul li {
+            float: left;
+            padding-right: 15px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+            .page .details ul li:last-child {
+                float: inherit;
+            }
+
+    .page h4 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+/* ------ wedgets ------ */
+.widgets {
+    background-color: #fff;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+}
+
+    .widgets h3 {
+        padding-bottom: 10px;
+        font-size: 20px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    .widgets ul {
+        list-style: none;
+        padding-left: 0px;
+    }
+
+        .widgets ul li {
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+    .widgets h4 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0.3px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+    }

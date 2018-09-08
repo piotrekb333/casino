@@ -26,7 +26,8 @@ namespace Casino.Controllers
                             Body = m.GetProperty("articleBody")?.Value?.ToString(),
                             Title = m.GetProperty("articleTitle")?.Value?.ToString(),
                             ImagePath = int.TryParse(m.GetProperty("articleBanner")?.Value?.ToString(), out idbanner) ? Umbraco.TypedMedia(idbanner).Url : "",
-                            DatePublished = m.GetProperty("articlePublishedDate").HasValue ? DateTime.Parse(m.GetProperty("articlePublishedDate").Value.ToString()) : new DateTime?()
+                            DatePublished = m.GetProperty("articlePublishedDate").HasValue ? DateTime.Parse(m.GetProperty("articlePublishedDate").Value.ToString()) : new DateTime?(),
+                            SiteUrl = m.Url
                         });
                     });
                     newsList = newsList.OrderByDescending(m => m.DatePublished).ToList();
