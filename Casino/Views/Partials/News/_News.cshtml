@@ -188,22 +188,57 @@
 *@
 
 
-<div class="post-widgets">
-        <div class="row">
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
             <div class="col-md-12">
-                @foreach (var item in Model)
-                {
-                    <div class="page">
-                        <h3><a href="@item.SiteUrl">@item.Title</a> </h3>
-                        <div class="details">
-                            <ul>
-                                <li>@(item.DatePublished.HasValue ? item.DatePublished.Value.ToString("MMM dd, yyyy") : "")</li>
-                            </ul>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="table-container">
+                            <table class="table table-filter">
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        string[] words = item.Body.Split();
+                                        var wordsString = words.Take(5);
+                                        <tr data-status="pagado">
+                                            <td>
+                                                <div class="media">
+
+                                                    <div class="media-body">
+                                                        <span class="media-meta pull-right">@(item.DatePublished.HasValue ? item.DatePublished.Value.ToString("MMM dd, yyyy") : "")</span>
+                                                        <h4 class="title">
+                                                            <a href="@item.SiteUrl">@item.Title</a>
+                                                        </h4>
+                                                        <p class="summary">@Html.Raw(string.Join(" ", wordsString)+" ...")</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                    </tbody>
+                            </table>
                         </div>
                     </div>
-                    <hr />
-                }
                 </div>
-        </div>
-
+            </div>
+    </div>
 </div>
+
+
+
+
+
+
+
+
+
+
