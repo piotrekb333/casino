@@ -4,25 +4,6 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = null;
-    Html.RequiresCss("~/css/bootstrap.min.css");
-    Html.RequiresCss("~/css/dataTables.bootstrap4.css");
-    Html.RequiresCss("~/css/font-awesome.min.css");
-    Html.RequiresCss("~/css/sb-admin.css");
-
-    Html.RequiresJs("~/Scripts/jquery-1.10.2.min.js",1);
-
-    Html.RequiresJs("~/Scripts/bootstrap.bundle.min.js",2);
-    //Html.RequiresJs("~/Scripts/jquery.dataTables.js",3);
-    //Html.RequiresJs("~/Scripts/dataTables.bootstrap4.js",4);
-    Html.RequiresJs("~/Scripts/modernizr-2.6.2.js",5);
-    Html.RequiresJs("~/Scripts/sb-admin.js",6);
-    //Html.RequiresJs("~/Scripts/sb-admin-datatables.js",7);
-    Html.RequiresJs("~/Scripts/sb-admin-charts.js",8);
-    Html.RequiresJs("~/Scripts/Newsletter/Newsletter.js",9);
-    Html.RequiresJs("~/Scripts/Chart.js",10);
-    Html.RequiresJs("~/Scripts/jquery.validate.min.js",11);
-
-
 }
 
 <head>
@@ -32,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Nomad Casino</title>
-    @Html.RenderCssHere()
+    @Styles.Render("~/bundles/Styles")
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124598707-1"></script>
     <script>
@@ -218,6 +199,6 @@
             </div>
         </div>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        @Html.RenderJsHere()
+        @Scripts.Render("~/bundles/MainScript")
     </div>
 </body>

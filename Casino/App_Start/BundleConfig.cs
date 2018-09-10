@@ -39,12 +39,13 @@ namespace Casino
                        "~/Scripts/modernizr-*"
                       ));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/bundles/Styles").Include(
                       "~/css/bootstrap.min.css",
                       "~/css/dataTables.bootstrap4.css",
                       "~/css/font-awesome.min.css",
                       "~/css/sb-admin.css"
                       ));
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
