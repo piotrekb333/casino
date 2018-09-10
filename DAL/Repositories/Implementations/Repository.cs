@@ -18,10 +18,14 @@ namespace DAL.Repositories.Implementations
         public Repository(DbContext context)
         {
             this._context = context;
+            this._context.Configuration.AutoDetectChangesEnabled = false;
+            this._context.Configuration.LazyLoadingEnabled = false;
         }
         public Repository()
         {
             this._context = new CasinoDbContext();
+            this._context.Configuration.AutoDetectChangesEnabled = false;
+            this._context.Configuration.LazyLoadingEnabled = false;
         }
         public T GetById(object id)
         {

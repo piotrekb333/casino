@@ -16,7 +16,8 @@ namespace DAL.Repositories.Implementations
         public NewsletterRepository()
         {
             this._context = new CasinoDbContext();
-
+            this._context.Configuration.AutoDetectChangesEnabled = false;
+            this._context.Configuration.LazyLoadingEnabled = false;
         }
         public bool EmailExistsInNewsletter(string email)
         {
