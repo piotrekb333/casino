@@ -394,6 +394,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookmakerController.cs" />
     <Compile Include="Controllers\CasinoController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -404,6 +405,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BookmakerModels\BookmakerModel.cs" />
     <Compile Include="Models\CasinoModels\CasinoModel.cs" />
+    <Compile Include="Models\Contact\ContactViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NavigationModels\TopNavigationModel.cs" />
@@ -2098,6 +2100,7 @@
     <Content Include="Views\Bookmaker.cshtml" />
     <Content Include="Views\Bookmakers.cshtml" />
     <Content Include="Views\Partials\Bookmakers\_Bookmakers.cshtml" />
+    <Content Include="Views\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -170,6 +170,7 @@ Umbraco.ModelsBuilder.Umbraco.ModelsBuilderBackOfficeController, Umbraco.ModelsB
 umbraco.providers.members.MembershipEventHandler, umbraco.providers, Version=1.0.6634.25795, Culture=neutral, PublicKeyToken=null
 Casino.Controllers.BookmakerController, Casino, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Casino.Controllers.CasinoController, Casino, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Casino.Controllers.ContactController, Casino, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Casino.Controllers.NewsController, Casino, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Casino.Controllers.NewsletterController, Casino, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.SampleSite.InstallPackageAction, Umbraco.SampleSite, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -601,6 +602,7 @@ Umbraco.Web.Mvc.SurfaceController
 
 Casino.Controllers.BookmakerController, Casino, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Casino.Controllers.CasinoController, Casino, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Casino.Controllers.ContactController, Casino, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Casino.Controllers.NewsController, Casino, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbProfileController, umbraco, Version=1.0.6634.25796, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginStatusController, umbraco, Version=1.0.6634.25796, Culture=neutral, PublicKeyToken=null
