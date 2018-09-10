@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "ae1a4eb47820d5d6")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e1edf98bb57a80fb")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -1257,6 +1257,24 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Bookmaker, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Title
+		///</summary>
+		[ImplementPropertyType("bookmakerTitle")]
+		public string BookmakerTitle
+		{
+			get { return this.GetPropertyValue<string>("bookmakerTitle"); }
+		}
+
+		///<summary>
+		/// Image
+		///</summary>
+		[ImplementPropertyType("imageUrl")]
+		public IPublishedContent ImageUrl
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("imageUrl"); }
 		}
 	}
 

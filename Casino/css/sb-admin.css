@@ -817,7 +817,7 @@ footer.sticky-footer {
 
 .table-filter .media .title {
     color: #2BBCDE;
-    font-size: 14px;
+    font-size: 14px !important;
     font-weight: bold;
     line-height: normal;
     margin: 0;
@@ -843,3 +843,5 @@ footer.sticky-footer {
 .table-filter .media .summary {
     font-size: 14px;
 }
+
+

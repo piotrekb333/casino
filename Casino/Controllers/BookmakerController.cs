@@ -24,8 +24,9 @@ namespace Casino.Controllers
                         int idbanner = 0;
                         newsList.Add(new BookmakerModel
                         {
+                            ImageUrl = int.TryParse(m.GetProperty("imageUrl")?.Value?.ToString(), out idbanner) ? Umbraco.TypedMedia(idbanner).Url : "",
                             //Body = m.GetProperty("articleBody")?.Value?.ToString(),
-                            //Title = m.GetProperty("articleTitle")?.Value?.ToString(),
+                            Title = m.GetProperty("bookmakerTitle")?.Value?.ToString(),
                             //ImagePath = int.TryParse(m.GetProperty("articleBanner")?.Value?.ToString(), out idbanner) ? Umbraco.TypedMedia(idbanner).Url : "",
                             //DatePublished = m.GetProperty("articlePublishedDate").HasValue ? DateTime.Parse(m.GetProperty("articlePublishedDate").Value.ToString()) : new DateTime?()
                         });
