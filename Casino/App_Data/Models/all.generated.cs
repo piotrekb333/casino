@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "57f0862968e6cde6")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "6c185749c4982b47")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -1132,6 +1132,15 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
 		}
+
+		///<summary>
+		/// Bookmakers List
+		///</summary>
+		[ImplementPropertyType("bookmakersList")]
+		public object BookmakersList
+		{
+			get { return this.GetPropertyValue("bookmakersList"); }
+		}
 	}
 
 	/// <summary>Bookmaker</summary>
@@ -1157,6 +1166,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Bookmaker, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Description
+		///</summary>
+		[ImplementPropertyType("bookmakerDescription")]
+		public string BookmakerDescription
+		{
+			get { return this.GetPropertyValue<string>("bookmakerDescription"); }
 		}
 
 		///<summary>

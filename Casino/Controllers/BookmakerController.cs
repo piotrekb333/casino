@@ -25,7 +25,7 @@ namespace Casino.Controllers
                         newsList.Add(new BookmakerModel
                         {
                             ImageUrl = int.TryParse(m.GetProperty("imageUrl")?.Value?.ToString(), out idbanner) ? Umbraco.TypedMedia(idbanner).Url : "",
-                            //Body = m.GetProperty("articleBody")?.Value?.ToString(),
+                            Description = m.GetProperty("bookmakerDescription")?.Value?.ToString(),
                             Title = m.GetProperty("bookmakerTitle")?.Value?.ToString(),
                             //ImagePath = int.TryParse(m.GetProperty("articleBanner")?.Value?.ToString(), out idbanner) ? Umbraco.TypedMedia(idbanner).Url : "",
                             //DatePublished = m.GetProperty("articlePublishedDate").HasValue ? DateTime.Parse(m.GetProperty("articlePublishedDate").Value.ToString()) : new DateTime?()
@@ -37,7 +37,7 @@ namespace Casino.Controllers
             }
             catch (Exception ex)
             {
-                LogHelper.Error(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType, "News error", ex);
+                LogHelper.Error(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType, "Bookmakers error", ex);
             }
             return Content("");
         }
