@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "6c185749c4982b47")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "f495e644c4343037")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -161,6 +161,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public IHtmlString HomeBody
 		{
 			get { return this.GetPropertyValue<IHtmlString>("homeBody"); }
+		}
+
+		///<summary>
+		/// Slider Images
+		///</summary>
+		[ImplementPropertyType("sliderImages")]
+		public IEnumerable<IPublishedContent> SliderImages
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("sliderImages"); }
 		}
 	}
 
