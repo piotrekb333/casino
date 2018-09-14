@@ -59,6 +59,13 @@ namespace Casino.App_Start
             builder.RegisterType<NewsletterRepository>()
             .As<INewsletterRepository>()
             .InstancePerRequest();
+
+            builder.RegisterType<MessageService>()
+            .As<IMessageService>()
+            .InstancePerRequest();
+            builder.RegisterType<MessageRepository>()
+            .As<IMessageRepository>()
+            .InstancePerRequest();
             //builder.RegisterModule<WebModule>();
             var container = builder.Build();
 

@@ -414,8 +414,10 @@
     <Compile Include="Models\Responses\AjaxResponse.cs" />
     <Compile Include="Models\Responses\SaveToNewsletterResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Implementations\MessageService.cs" />
     <Compile Include="Services\Implementations\NewsletterService.cs" />
     <Compile Include="Services\Implementations\SearchService.cs" />
+    <Compile Include="Services\Interfaces\IMessageService.cs" />
     <Compile Include="Services\Interfaces\INewsletterService.cs" />
     <Compile Include="Services\Interfaces\ISearchService.cs" />
     <Compile Include="Startup.cs" />

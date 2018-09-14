@@ -4,21 +4,26 @@
     Layout = "Master.cshtml";
 }
 
-@* the fun starts here *@
-
-@using (Html.BeginUmbracoForm<ContactController>("Contact", FormMethod.Post ))
+@if (ViewBag.WasSent != null && (Convert.ToBoolean(ViewBag.WasSent)) == true)
 {
-<div class="form-group">
-    <label for="exampleInputEmail1">Title</label>
-    <input type="text" class="form-control" id="Title" name="Title" aria-describedby="titleHelp" placeholder="Enter title">
-</div>
-<div class="form-group">
-    <label for="exampleTextarea">Message</label>
-    <textarea class="form-control" id="Body" name="Body" rows="3"></textarea>
-</div>
-<div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="text" class="form-control" id="Email" name="Email" aria-describedby="emailHelp" placeholder="Enter email">
-</div>
-<button type="submit" class="btn btn-primary">Submit</button>
+    <div class="alert alert-success" role="alert">
+        Your message was sent!
+    </div>
+}
+
+@using (Html.BeginUmbracoForm<ContactController>("Contact", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="exampleInputEmail1">Title</label>
+        <input type="text" class="form-control" id="Title" name="Title" aria-describedby="titleHelp" placeholder="Enter title">
+    </div>
+    <div class="form-group">
+        <label for="exampleTextarea">Message</label>
+        <textarea class="form-control" id="Body" name="Body" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="text" class="form-control" id="Email" name="Email" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
 }

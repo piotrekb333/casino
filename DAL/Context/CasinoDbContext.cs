@@ -15,5 +15,6 @@ namespace DAL.Context
         {
         }
         public DbSet<Newsletter> Newsletters { get; set; }
+        public DbSet<Message> Messages { get; set; }
     }
 }
