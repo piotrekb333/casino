@@ -28,15 +28,17 @@ namespace Casino
             bundles.Add(new ScriptBundle("~/bundles/MainScript").Include(
                       "~/Scripts/jquery-1.10.2.min.js",
                       "~/Scripts/Chart.js",
-                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.min.js",
+                      "~/Scripts/respond.js",
+                      "~/Scripts/modernizr-*",
                       "~/Scripts/jquery.dataTables.js",
                       "~/Scripts/dataTables.bootstrap4.js",
                       "~/Scripts/sb-admin.js",
                       "~/Scripts/sb-admin-datatables.js",
                       "~/Scripts/sb-admin-charts.js",
                       "~/Scripts/Newsletter/Newsletter.js",
-                      "~/Scripts/jquery.validate*",
-                       "~/Scripts/modernizr-*"
+                      "~/Scripts/jquery.validate*"
+                       
                       ));
 
             bundles.Add(new StyleBundle("~/bundles/Styles").Include(
@@ -45,7 +47,7 @@ namespace Casino
                       "~/css/font-awesome.min.css",
                       "~/css/sb-admin.css"
                       ));
-            BundleTable.EnableOptimizations = true;
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }

@@ -33,12 +33,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                 @*
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-            <a class="nav-link" href="index.html">
-                <i class="fa fa-fw fa-dashboard"></i>
-                <span class="nav-link-text">Dashboard</span>
-            </a>
-        </li>
+                    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                        <a class="nav-link" href="index.html">
+                            <i class="fa fa-fw fa-dashboard"></i>
+                            <span class="nav-link-text">Dashboard</span>
+                        </a>
+                    </li>
                 *@
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Articles">
                     <a class="nav-link" href="/Articles">
@@ -182,28 +182,29 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Newsletter</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="newsletter-form">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email Address</label>
-                                <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter email">
-                            </div>
-                            <button id="saveToEmailBtn" type="button" class="btn btn-primary">Subscribe</button>
-                        </form>
-                    </div>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        @Scripts.Render("~/bundles/MainScript")
+    </div>
+
+    <div class="modal fade" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Newsletter</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="newsletter-form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email Address</label>
+                            <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter email">
+                        </div>
+                        <button id="saveToEmailBtn" type="button" class="btn btn-primary">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        @Scripts.Render("~/bundles/MainScript")
     </div>
 </body>
