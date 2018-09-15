@@ -27,6 +27,8 @@ namespace Casino.Controllers
                             ImageUrl = int.TryParse(m.GetProperty("imageUrl")?.Value?.ToString(), out idbanner) ? Umbraco.TypedMedia(idbanner).Url : "",
                             Description = m.GetProperty("bookmakerDescription")?.Value?.ToString(),
                             Title = m.GetProperty("bookmakerTitle")?.Value?.ToString(),
+                            Description2 = m.GetProperty("bookmakerDescription2")?.Value?.ToString(),
+                            Description3 = m.GetProperty("bookmakerDescription3")?.Value?.ToString(),
                             //ImagePath = int.TryParse(m.GetProperty("articleBanner")?.Value?.ToString(), out idbanner) ? Umbraco.TypedMedia(idbanner).Url : "",
                             //DatePublished = m.GetProperty("articlePublishedDate").HasValue ? DateTime.Parse(m.GetProperty("articlePublishedDate").Value.ToString()) : new DateTime?()
                         });

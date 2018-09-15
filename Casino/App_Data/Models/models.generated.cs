@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "f495e644c4343037")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a662081a883fc9a9")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -1168,6 +1168,24 @@ namespace Umbraco.Web.PublishedContentModels
 		public string BookmakerDescription
 		{
 			get { return this.GetPropertyValue<string>("bookmakerDescription"); }
+		}
+
+		///<summary>
+		/// Description 2
+		///</summary>
+		[ImplementPropertyType("bookmakerDescription2")]
+		public string BookmakerDescription2
+		{
+			get { return this.GetPropertyValue<string>("bookmakerDescription2"); }
+		}
+
+		///<summary>
+		/// Description 3
+		///</summary>
+		[ImplementPropertyType("bookmakerDescription3")]
+		public string BookmakerDescription3
+		{
+			get { return this.GetPropertyValue<string>("bookmakerDescription3"); }
 		}
 
 		///<summary>

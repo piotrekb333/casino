@@ -11,16 +11,20 @@
                 <th>Col1</th>
                 <th>Col2</th>
                 <th>Col3</th>
+                <th>Col4</th>
+                <th>Col5</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td><img src="@item.ImageUrl" /></td>
-                    <td>@item.Title</td>
-                    <td>@item.Description</td>
-                </tr>
+            <tr>
+                <td><img src="@item.ImageUrl" /></td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.Description2</td>
+                <td>@item.Description3</td>
+            </tr>
             }
         </tbody>
     </table>
