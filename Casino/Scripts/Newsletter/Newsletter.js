@@ -11,7 +11,7 @@ function SaveToNewsletter() {
     $("#newsletter-form").validate({
         ignore: [],
         rules: {
-            Email: {
+            NewsletterEmail: {
                 required: true,
                 email:true
             },
@@ -35,11 +35,11 @@ function SaveToNewsletter() {
         url: '/Umbraco/Api/Newsletter/SaveToNewsletter',
         contentType: 'application/json; charset=utf-8',
         data: JSON.stringify({
-            Email: $("#Email").val()
+            Email: $("#NewsletterEmail").val()
         }),
     }).done(function (result) {
         if (result.Success) {
-            $("#Email").val('');
+            $("#NewsletterEmail").val('');
             $("#newsletterModal").modal('hide');
             swal("Good job!", "Done", "success");
         } else {
