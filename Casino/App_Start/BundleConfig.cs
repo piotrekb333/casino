@@ -27,7 +27,8 @@ namespace Casino
 
             bundles.Add(new ScriptBundle("~/bundles/MainScript").Include(
                       "~/Scripts/jquery-1.10.2.min.js",
-                      "~/Scripts/Chart.js",
+                      "~/Scripts/popper.min.js",
+                      //"~/Scripts/Chart.js",
                       "~/Scripts/bootstrap.min.js",
                       "~/Scripts/respond.js",
                       "~/Scripts/modernizr-*",
@@ -35,7 +36,7 @@ namespace Casino
                       "~/Scripts/dataTables.bootstrap4.js",
                       "~/Scripts/sb-admin.js",
                       "~/Scripts/sb-admin-datatables.js",
-                      "~/Scripts/sb-admin-charts.js",
+                      //"~/Scripts/sb-admin-charts.js",
                       "~/Scripts/Newsletter/Newsletter.js",
                       "~/Scripts/jquery.validate*"
                        
