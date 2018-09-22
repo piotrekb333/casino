@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a662081a883fc9a9")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "30234de4ca923fc9")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -168,6 +168,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Home, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Footer Images
+		///</summary>
+		[ImplementPropertyType("footerImages")]
+		public IEnumerable<IPublishedContent> FooterImages
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("footerImages"); }
 		}
 
 		///<summary>
@@ -929,6 +938,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public Umbraco.Web.Models.RelatedLinks ArticlesUrl
 		{
 			get { return this.GetPropertyValue<Umbraco.Web.Models.RelatedLinks>("articlesURL"); }
+		}
+
+		///<summary>
+		/// Images
+		///</summary>
+		[ImplementPropertyType("footerImages")]
+		public IEnumerable<IPublishedContent> FooterImages
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("footerImages"); }
 		}
 	}
 

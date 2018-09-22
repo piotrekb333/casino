@@ -4,7 +4,14 @@
 @inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = null;
+
+    IContent content = ApplicationContext.Current.Services.ContentService.GetById(1141);
+    var logoList = content.GetValue<List<IContent>>("footerImages");
+    var logoListString = content.GetValue("footerImages");
+    var logoListTable = logoListString.ToString().Split(',');
+ 
 }
+
 
 <head>
     <meta charset="utf-8">
@@ -22,6 +29,9 @@
         gtag('js', new Date());
         gtag('config', 'UA-124598707-1');
     </script>
+
+
+
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
     <!-- Navigation-->
@@ -58,6 +68,14 @@
                         <span class="nav-link-text">Bookmakers</span>
                     </a>
                 </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="eSport">
+                    <a class="nav-link" href="/esports-bookmakers">
+                        <i class="fa fa-fw fa-table"></i>
+                        <span class="nav-link-text">eSport</span>
+                    </a>
+                </li>
+
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Contact">
                     <a class="nav-link" href="/Contact">
                         <i class="fa fa-fw fa-file"></i>
@@ -156,6 +174,22 @@
         <footer class="sticky-footer">
             <div class="container">
                 <div class="text-center">
+
+                    @{
+                        if (logoListTable != null)
+                        {
+                            foreach (var item in logoListTable)
+                            {
+                                var imageGuidUdi = GuidUdi.Parse(item);
+                                var imageNodeId = ApplicationContext.Current.Services.EntityService.GetIdForKey(imageGuidUdi.Guid, (UmbracoObjectTypes)Enum.Parse(typeof(UmbracoObjectTypes), imageGuidUdi.EntityType, true));
+                                var imageNode = Umbraco.TypedMedia(imageNodeId.Result);
+                                <img src="@Umbraco.Media(imageNodeId.Result).Url" style="width:200px" />
+                            }
+                        }
+
+                    }
+
+
                     <small>Copyright © Nomad Casino 2018</small>
                     <span id="siteseal">
                         <script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=CD9MoLPfmgWLxd15rSjxE6JrXb9sWbRb3eDxdEsKQaUF5eHpQ3TivpfwRyV2"></script>
