@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "30234de4ca923fc9")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c7eb70b8da80c5e3")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -1248,6 +1248,94 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Contact, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+	}
+
+	/// <summary>Review</summary>
+	[PublishedContentModel("review")]
+	public partial class Review : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "review";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Review(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Review, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Review Body
+		///</summary>
+		[ImplementPropertyType("reviewBody")]
+		public IHtmlString ReviewBody
+		{
+			get { return this.GetPropertyValue<IHtmlString>("reviewBody"); }
+		}
+
+		///<summary>
+		/// Review Rating
+		///</summary>
+		[ImplementPropertyType("reviewRating")]
+		public int ReviewRating
+		{
+			get { return this.GetPropertyValue<int>("reviewRating"); }
+		}
+
+		///<summary>
+		/// Review Title
+		///</summary>
+		[ImplementPropertyType("reviewTitle")]
+		public string ReviewTitle
+		{
+			get { return this.GetPropertyValue<string>("reviewTitle"); }
+		}
+	}
+
+	/// <summary>Reviews</summary>
+	[PublishedContentModel("reviews")]
+	public partial class Reviews : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "reviews";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Reviews(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Reviews, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// List of Reviews
+		///</summary>
+		[ImplementPropertyType("listreviews")]
+		public object Listreviews
+		{
+			get { return this.GetPropertyValue("listreviews"); }
 		}
 	}
 
