@@ -2106,6 +2106,8 @@
     <Content Include="Views\Partials\Bookmakers\_Bookmakers.cshtml" />
     <Content Include="Views\Contact.cshtml" />
     <Content Include="Views\Partials\Reviews\_Reviews.cshtml" />
+    <Content Include="Views\Reviews.cshtml" />
+    <Content Include="Views\Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

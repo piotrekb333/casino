@@ -6,3 +6,34 @@
 }
 
 
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="review-block">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="review-block-rate">
+                            @for (var i = 0; i < item.Rating; i++)
+                            {
+                                <span class="fa fa-star checked-star"></span>
+                            }
+                            @for (var i = 0; i < (5 - item.Rating); i++)
+                            {
+                                <span class="fa fa-star"></span>
+                            }
+                        </div>
+                        <div class="review-block-title">@item.Title</div>
+                        <div class="review-block-description">@Html.Raw(item.Body)</div>
+                    </div>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+
+}
+
+
+

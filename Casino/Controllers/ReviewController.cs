@@ -23,9 +23,9 @@ namespace Casino.Controllers
                     {
                         reviewList.Add(new ReviewModel
                         {
-                            Body = m.GetProperty("reviewBody")?.Value?.ToString(),
-                            Title = m.GetProperty("reviewTitle")?.Value?.ToString(),
-                            Rating = m.GetProperty("reviewRating").HasValue ? int.Parse(m.GetProperty("reviewRating").ToString()) : 2,
+                            Body = m.GetProperty("ReviewBody")?.Value?.ToString(),
+                            Title = m.GetProperty("ReviewTitle")?.Value?.ToString(),
+                            Rating = m.GetProperty("ReviewRating").HasValue ? int.Parse(m.GetProperty("ReviewRating").Value.ToString()) : 2,
                             SiteUrl = m.Url
                         });
                     });
