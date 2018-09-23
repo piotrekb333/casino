@@ -183,7 +183,7 @@
                                 var imageGuidUdi = GuidUdi.Parse(item);
                                 var imageNodeId = ApplicationContext.Current.Services.EntityService.GetIdForKey(imageGuidUdi.Guid, (UmbracoObjectTypes)Enum.Parse(typeof(UmbracoObjectTypes), imageGuidUdi.EntityType, true));
                                 var imageNode = Umbraco.TypedMedia(imageNodeId.Result);
-                                <img src="@Umbraco.Media(imageNodeId.Result).Url" style="width:200px" />
+                                <img src="@Umbraco.Media(imageNodeId.Result).Url" style="width:150px" />
                             }
                         }
 
