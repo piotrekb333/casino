@@ -182,27 +182,28 @@
         <footer class="sticky-footer">
             <div class="container">
                 <div class="text-center">
-
-                    @{
-                        if (logoListTable != null)
-                        {
-                            foreach (var item in logoListTable)
+                    <div class="col-md-12">
+                        @{
+                            if (logoListTable != null)
                             {
-                                var imageGuidUdi = GuidUdi.Parse(item);
-                                var imageNodeId = ApplicationContext.Current.Services.EntityService.GetIdForKey(imageGuidUdi.Guid, (UmbracoObjectTypes)Enum.Parse(typeof(UmbracoObjectTypes), imageGuidUdi.EntityType, true));
-                                var imageNode = Umbraco.TypedMedia(imageNodeId.Result);
-                                <img src="@Umbraco.Media(imageNodeId.Result).Url" style="width:150px" />
+                                foreach (var item in logoListTable)
+                                {
+                                    var imageGuidUdi = GuidUdi.Parse(item);
+                                    var imageNodeId = ApplicationContext.Current.Services.EntityService.GetIdForKey(imageGuidUdi.Guid, (UmbracoObjectTypes)Enum.Parse(typeof(UmbracoObjectTypes), imageGuidUdi.EntityType, true));
+                                    var imageNode = Umbraco.TypedMedia(imageNodeId.Result);
+                                    <img src="@Umbraco.Media(imageNodeId.Result).Url" style="width:100px" />
+                                }
                             }
+
                         }
-
-                    }
-
-
-                    <small>Copyright © Nomad Casino 2018</small>
-                    <span id="siteseal">
-                        <script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=CD9MoLPfmgWLxd15rSjxE6JrXb9sWbRb3eDxdEsKQaUF5eHpQ3TivpfwRyV2"></script>
-                    </span>
-                    <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+                    </div>
+                    <div class="col-md-12">
+                        <small>Copyright © Nomad Casino 2018</small>
+                        <span id="siteseal">
+                            <script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=CD9MoLPfmgWLxd15rSjxE6JrXb9sWbRb3eDxdEsKQaUF5eHpQ3TivpfwRyV2"></script>
+                        </span>
+                        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+                    </div>
                 </div>
             </div>
         </footer>
