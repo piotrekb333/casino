@@ -561,6 +561,7 @@
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\top100bookmaker.com - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\top100bookmaker.com - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Chart.js" />
     <Content Include="Scripts\dataTables.bootstrap4.js" />

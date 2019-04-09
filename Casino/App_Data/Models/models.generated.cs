@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c7eb70b8da80c5e3")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "fd17fc05376ac78a")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -155,30 +155,12 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Footer Images
-		///</summary>
-		[ImplementPropertyType("footerImages")]
-		public IEnumerable<IPublishedContent> FooterImages
-		{
-			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("footerImages"); }
-		}
-
-		///<summary>
 		/// HomeBody
 		///</summary>
 		[ImplementPropertyType("homeBody")]
 		public IHtmlString HomeBody
 		{
 			get { return this.GetPropertyValue<IHtmlString>("homeBody"); }
-		}
-
-		///<summary>
-		/// Slider Images
-		///</summary>
-		[ImplementPropertyType("sliderImages")]
-		public IEnumerable<IPublishedContent> SliderImages
-		{
-			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("sliderImages"); }
 		}
 	}
 
@@ -397,6 +379,122 @@ namespace Umbraco.Web.PublishedContentModels
 		public string Excerpt
 		{
 			get { return this.GetPropertyValue<string>("excerpt"); }
+		}
+
+		///<summary>
+		/// Page Title: The title of the page, this is also the first text in a google search result. The ideal length is between 40 and 60 characters
+		///</summary>
+		[ImplementPropertyType("pageTitle")]
+		public string PageTitle
+		{
+			get { return this.GetPropertyValue<string>("pageTitle"); }
+		}
+
+		///<summary>
+		/// Keywords: Keywords that describe the content of the page. This is consired optional since most modern search engines don't use this anymore
+		///</summary>
+		[ImplementPropertyType("keywords")]
+		public IEnumerable<string> Keywords
+		{
+			get { return Umbraco.Web.PublishedContentModels.NavigationBase.GetKeywords(this); }
+		}
+
+		///<summary>
+		/// Description: A brief description of the content on your page. This text is shown below the title in a google search result and also used for Social Sharing Cards. The ideal length is between 130 and 155 characters
+		///</summary>
+		[ImplementPropertyType("seoMetaDescription")]
+		public string SeoMetaDescription
+		{
+			get { return Umbraco.Web.PublishedContentModels.NavigationBase.GetSeoMetaDescription(this); }
+		}
+
+		///<summary>
+		/// Hide in Navigation: If you don't want this page to appear in the navigation, check this box
+		///</summary>
+		[ImplementPropertyType("umbracoNavihide")]
+		public bool UmbracoNavihide
+		{
+			get { return Umbraco.Web.PublishedContentModels.NavigationBase.GetUmbracoNavihide(this); }
+		}
+	}
+
+	/// <summary>Contact</summary>
+	[PublishedContentModel("contact")]
+	public partial class Contact : PublishedContentModel, INavigationBase
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "contact";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Contact(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Contact, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// ApiKey: To use the map you'll need your own Google API key. More information here: https://developers.google.com/maps/documentation/javascript/error-messages#no-api-keys
+		///</summary>
+		[ImplementPropertyType("apiKey")]
+		public string ApiKey
+		{
+			get { return this.GetPropertyValue<string>("apiKey"); }
+		}
+
+		///<summary>
+		/// Pick a Contact Form: If Umbraco Forms is installed you'll be able to select a form here.
+		///</summary>
+		[ImplementPropertyType("contactForm")]
+		public string ContactForm
+		{
+			get { return this.GetPropertyValue<string>("contactForm"); }
+		}
+
+		///<summary>
+		/// Contact Form Header
+		///</summary>
+		[ImplementPropertyType("contactFormHeader")]
+		public string ContactFormHeader
+		{
+			get { return this.GetPropertyValue<string>("contactFormHeader"); }
+		}
+
+		///<summary>
+		/// Contact Intro
+		///</summary>
+		[ImplementPropertyType("contactIntro")]
+		public IHtmlString ContactIntro
+		{
+			get { return this.GetPropertyValue<IHtmlString>("contactIntro"); }
+		}
+
+		///<summary>
+		/// Your Address: Plot your address on the map and it'll be displayed on the contact page
+		///</summary>
+		[ImplementPropertyType("map")]
+		public Terratype.Models.Model Map
+		{
+			get { return this.GetPropertyValue<Terratype.Models.Model>("map"); }
+		}
+
+		///<summary>
+		/// Map Header
+		///</summary>
+		[ImplementPropertyType("mapHeader")]
+		public string MapHeader
+		{
+			get { return this.GetPropertyValue<string>("mapHeader"); }
 		}
 
 		///<summary>
@@ -923,15 +1021,6 @@ namespace Umbraco.Web.PublishedContentModels
 		{
 			get { return this.GetPropertyValue<Umbraco.Web.Models.RelatedLinks>("articlesURL"); }
 		}
-
-		///<summary>
-		/// Images
-		///</summary>
-		[ImplementPropertyType("footerImages")]
-		public IEnumerable<IPublishedContent> FooterImages
-		{
-			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("footerImages"); }
-		}
 	}
 
 	/// <summary>Articles</summary>
@@ -1116,226 +1205,6 @@ namespace Umbraco.Web.PublishedContentModels
 		public string TitleCasino
 		{
 			get { return this.GetPropertyValue<string>("titleCasino"); }
-		}
-	}
-
-	/// <summary>Bookmakers</summary>
-	[PublishedContentModel("bookmakers")]
-	public partial class Bookmakers : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "bookmakers";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public Bookmakers(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Bookmakers, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Bookmakers List
-		///</summary>
-		[ImplementPropertyType("bookmakersList")]
-		public object BookmakersList
-		{
-			get { return this.GetPropertyValue("bookmakersList"); }
-		}
-	}
-
-	/// <summary>Bookmaker</summary>
-	[PublishedContentModel("bookmaker")]
-	public partial class Bookmaker : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "bookmaker";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public Bookmaker(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Bookmaker, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Description
-		///</summary>
-		[ImplementPropertyType("bookmakerDescription")]
-		public string BookmakerDescription
-		{
-			get { return this.GetPropertyValue<string>("bookmakerDescription"); }
-		}
-
-		///<summary>
-		/// Description 2
-		///</summary>
-		[ImplementPropertyType("bookmakerDescription2")]
-		public string BookmakerDescription2
-		{
-			get { return this.GetPropertyValue<string>("bookmakerDescription2"); }
-		}
-
-		///<summary>
-		/// Description 3
-		///</summary>
-		[ImplementPropertyType("bookmakerDescription3")]
-		public string BookmakerDescription3
-		{
-			get { return this.GetPropertyValue<string>("bookmakerDescription3"); }
-		}
-
-		///<summary>
-		/// Title
-		///</summary>
-		[ImplementPropertyType("bookmakerTitle")]
-		public string BookmakerTitle
-		{
-			get { return this.GetPropertyValue<string>("bookmakerTitle"); }
-		}
-
-		///<summary>
-		/// Image
-		///</summary>
-		[ImplementPropertyType("imageUrl")]
-		public IPublishedContent ImageUrl
-		{
-			get { return this.GetPropertyValue<IPublishedContent>("imageUrl"); }
-		}
-	}
-
-	/// <summary>Contact</summary>
-	[PublishedContentModel("contact")]
-	public partial class Contact : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "contact";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public Contact(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Contact, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-	}
-
-	/// <summary>Review</summary>
-	[PublishedContentModel("review")]
-	public partial class Review : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "review";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public Review(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Review, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Review Body
-		///</summary>
-		[ImplementPropertyType("reviewBody")]
-		public IHtmlString ReviewBody
-		{
-			get { return this.GetPropertyValue<IHtmlString>("reviewBody"); }
-		}
-
-		///<summary>
-		/// Review Rating
-		///</summary>
-		[ImplementPropertyType("reviewRating")]
-		public int ReviewRating
-		{
-			get { return this.GetPropertyValue<int>("reviewRating"); }
-		}
-
-		///<summary>
-		/// Review Title
-		///</summary>
-		[ImplementPropertyType("reviewTitle")]
-		public string ReviewTitle
-		{
-			get { return this.GetPropertyValue<string>("reviewTitle"); }
-		}
-	}
-
-	/// <summary>Reviews</summary>
-	[PublishedContentModel("reviews")]
-	public partial class Reviews : PublishedContentModel
-	{
-#pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "reviews";
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
-#pragma warning restore 0109
-
-		public Reviews(IPublishedContent content)
-			: base(content)
-		{ }
-
-#pragma warning disable 0109 // new is redundant
-		public new static PublishedContentType GetModelContentType()
-		{
-			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
-		}
-#pragma warning restore 0109
-
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Reviews, TValue>> selector)
-		{
-			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// List of Reviews
-		///</summary>
-		[ImplementPropertyType("listreviews")]
-		public object Listreviews
-		{
-			get { return this.GetPropertyValue("listreviews"); }
 		}
 	}
 

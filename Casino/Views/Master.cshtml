@@ -8,8 +8,8 @@
     IContent content = ApplicationContext.Current.Services.ContentService.GetById(1141);
     var logoList = content.GetValue<List<IContent>>("footerImages");
     var logoListString = content.GetValue("footerImages");
-    var logoListTable = logoListString.ToString().Split(',');
- 
+
+
 }
 
 
@@ -183,19 +183,7 @@
             <div class="container">
                 <div class="text-center">
                     <div class="col-md-12">
-                        @{
-                            if (logoListTable != null)
-                            {
-                                foreach (var item in logoListTable)
-                                {
-                                    var imageGuidUdi = GuidUdi.Parse(item);
-                                    var imageNodeId = ApplicationContext.Current.Services.EntityService.GetIdForKey(imageGuidUdi.Guid, (UmbracoObjectTypes)Enum.Parse(typeof(UmbracoObjectTypes), imageGuidUdi.EntityType, true));
-                                    var imageNode = Umbraco.TypedMedia(imageNodeId.Result);
-                                    <img src="@Umbraco.Media(imageNodeId.Result).Url" style="width:100px" />
-                                }
-                            }
 
-                        }
                     </div>
                     <div class="col-md-12">
                         <small>Copyright © Nomad Casino 2018</small>
